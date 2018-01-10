@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/refresh_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrDrawable="@drawable/default_ptr_flip"
+        ptr:ptrHeaderBackground="#383838"
+        ptr:ptrHeaderTextColor="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/rl"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:layout_height="40dp">
+                <ImageView
+                    android:id="@+id/fen_erw"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/sao_kind"
+                    />
+                <ImageView
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/soukuang"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content" />
+                <!--<EditText
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="14dp"
+                    android:background="@drawable/edit_style"
+                    android:hint="汽车用品超级品类日"/>-->
+
+                <ImageView
+                    android:id="@+id/fen_xx"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/msg_hei" />
+            </RelativeLayout>
+            <android.support.v4.view.ViewPager
+                android:id="@+id/image_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="170dp">
+            </android.support.v4.view.ViewPager>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/jdfenlei"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="15dp"
+                    android:layout_weight="3"
+                    android:textColor="#f00"
+                    android:text="    京东快报"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+                <TextView
+
+                    android:gravity="center"
+                    android:layout_weight="7"
+                    android:id="@+id/paodata"
+                    android:text="日本太会玩是卡卡的东"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:textSize="15dp"
+                    android:layout_weight="3"
+                    android:text="|  更多"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <ImageView
+                android:background="@drawable/timg"
+                android:layout_width="match_parent"
+                android:layout_height="130dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical">
+
+                <TextView
+
+                    android:id="@+id/tv_miaosha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="京东秒杀"
+                    android:textColor="#f00" />
+
+                <TextView
+                    android:id="@+id/tv_miaosha_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="10点场" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/tv_miaosha_shi"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="@drawable/shape_miaosha_time"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="#fff"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/tv_miaosha_minter"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="@drawable/shape_miaosha_time"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="#fff"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+
+                        android:text=":" />
+
+                    <TextView
+                        android:id="@+id/tv_miaosha_second"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:background="@drawable/shape_miaosha_time"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="#fff"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/miaosha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+            <TextView
+                android:textColor="#f00"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:text="为  您  推  荐 "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/tuijian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+</LinearLayout>

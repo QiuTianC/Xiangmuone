@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="bwie.com.jingdong.activity.FristActivity">
+
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_weight="9"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"></FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:orientation="horizontal"
+        android:layout_weight="0.8"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_weight="1"
+            android:checked="true"
+            android:background="@drawable/shouye"
+            android:button="@null"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_weight="1"
+            android:background="@drawable/fenlei"
+            android:button="@null"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/rb3"
+            android:layout_weight="1"
+            android:background="@drawable/faxian"
+            android:button="@null"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/rb4"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="@drawable/gouwuche"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/rb5"
+            android:layout_weight="1"
+            android:background="@drawable/wode"
+            android:button="@null"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+</LinearLayout>

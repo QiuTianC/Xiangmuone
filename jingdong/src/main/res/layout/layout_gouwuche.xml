@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/refresh_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrDrawable="@drawable/default_ptr_flip"
+        ptr:ptrHeaderBackground="#383838"
+        ptr:ptrHeaderTextColor="#FFFFFF">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:id="@+id/t"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:text="购物车"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:src="@drawable/msg_hei"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <TextView
+        android:id="@+id/tv"
+        android:background="#3333"
+        android:layout_below="@+id/t"
+        android:layout_marginBottom="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+
+        <LinearLayout
+            android:layout_below="@+id/tv"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/dlll"
+                android:visibility="invisible"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/goudenglu"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/bian_kuang_line"
+                        android:text="登录"
+                        android:layout_width="60dp"
+                        android:layout_height="30dp" />
+                    <TextView
+                        android:text="登陆后懂不电脑与手机购物车中的商品"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"
+                    android:text="购物车是空的"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp" />
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:background="@drawable/bian_kuang_line"
+                        android:text="逛逛秒杀"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp" />
+                    <Button
+                        android:textColor="#f00"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/bian_kuang_line"
+                        android:text="看看关注"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--购物车的二级列表-->
+                <bwie.com.jingdong.view.CartExpanableListview
+                    android:id="@+id/expanable_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                </bwie.com.jingdong.view.CartExpanableListview>
+            <!--为你推荐-->
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:background="#3333"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="为  您  推  荐 "
+                    android:textColor="#f00"
+                    android:textSize="20dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/tuijian"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+    <LinearLayout
+        android:background="#fff"
+        android:id="@+id/linear_layout"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <CheckBox
+            android:layout_marginLeft="10dp"
+            android:button="@null"
+            android:background="@drawable/check_box_selector"
+            android:id="@+id/check_all"
+            android:layout_width="23dp"
+            android:layout_height="23dp" />
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:text="全选"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginLeft="40dp"
+            android:textSize="20dp"
+            android:id="@+id/text_total"
+            android:text="合计:¥0.00"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="去结算(0)"
+            android:background="#ff0000"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:id="@+id/text_buy"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+</RelativeLayout>
